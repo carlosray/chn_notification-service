@@ -9,5 +9,5 @@ RUN mvn -f /home/app/pom.xml clean install
 # Package stage
 #
 FROM openjdk:11-jre-slim
-COPY --from=build /home/app/target/resource-service-1.0.jar /usr/local/lib/notification-service-1.0.jar
+COPY --from=build /home/app/target/notification-service-1.0.jar /usr/local/lib/notification-service-1.0.jar
 ENTRYPOINT ["java","-jar","/usr/local/lib/notification-service-1.0.jar"]
