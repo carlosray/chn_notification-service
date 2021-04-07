@@ -7,7 +7,7 @@ public enum Notification {
     MAIL {
         @Override
         public SendService getSendService() {
-            return NotificationServiceApp.getContext().getBean("mailSendService", SendService.class);
+            return NotificationServiceApp.getApplicationContext().getBean("mailSendService", SendService.class);
         }
     },
     NONE {
